@@ -1,6 +1,6 @@
 # Prompt Optimizer
 
-> **Developed for the Moonshot Challenge (MISTRAL)** 🚀
+> **Developed for the Moonshot Challenge (MISTRAL)**
 
 Automated prompt refinement system that iteratively improves LLM prompts using self-correction.
 

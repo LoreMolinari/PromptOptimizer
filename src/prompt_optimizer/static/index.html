@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Refiner</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Prompt Refiner</h1>
+            <p>Turn rough prompts into powerful instructions</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="form-group">
+                    <label for="roughPrompt">Rough Prompt</label>
+                    <textarea id="roughPrompt" placeholder="e.g., Explain quantum physics to a 5-year old"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="context">Context (Optional)</label>
+                    <input type="text" id="context" placeholder="e.g., Identifying famous literary quotes">
+                </div>
+
+                <div class="form-group">
+                    <label for="domainSelect">Domain</label>
+                    <select id="domainSelect">
+                        <option value="general">General</option>
+                        <option value="code">Code (Python, SQL, etc.)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="iterations">Iterations</label>
+                    <input type="number" id="iterations" value="3" min="1" max="5">
+                </div>
+
+                <button id="refineBtn">Refine Prompt</button>
+            </div>
+
+            <div id="resultSection" style="display: none;">
+                <h3>Refined Prompt</h3>
+                <div class="result-box" id="refinedPrompt"></div>
+
+                <div id="versionsList"></div>
+            </div>
+
+            <div class="card" id="testSection" style="display: none;">
+                <h3>Test Refined Prompt</h3>
+                <div class="form-group">
+                    <label for="testInput">Test Input</label>
+                    <textarea id="testInput" placeholder="Enter your actual question or input here..."></textarea>
+                </div>
+                <button id="testBtn">Test</button>
+
+                <div id="testResult" style="display: none; margin-top: 15px;">
+                    <h4>Result</h4>
+                    <div class="result-box" id="testOutput"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
